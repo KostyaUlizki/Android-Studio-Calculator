@@ -37,10 +37,16 @@ public class MainActivity extends AppCompatActivity {
             str = "";
         }
         else if(b.getText().equals("-")){
-            sym = '-';
-            result.setText("");
-            num1 = Integer.parseInt(str);
-            str = "";
+            if(str.isEmpty()){ // ability to have negative numbers 
+                str+= "-";
+            }
+            else{
+                sym = '-';
+                result.setText("");
+                num1 = Integer.parseInt(str);
+                str = "";
+            }
+
         }
         else if(b.getText().equals("X")){
             sym = '*';
